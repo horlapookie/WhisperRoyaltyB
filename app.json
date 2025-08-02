@@ -1,0 +1,86 @@
+{
+  "name": "your hïghñëss bot v1 beta",
+  "description": "A WhatsApp Bot Created By horlapookie",
+  "logo": "https://telegra.ph/file/f6230a0cb5b118fa01561.jpg",
+  "keywords": ["bot", "WhatsApp", "JavaScript", "horlapookie"],
+  "success_url": "/",
+  "stack": "heroku-24",
+  "env": {
+    "SESSION_ID": {
+      "description": "Put your SESSION_ID here (base64 encoded session data).",
+      "value": ""
+    },
+    "PREFIX": {
+      "description": "Enter your desired prefix for bot. You can set `. | ! | * | all`",
+      "value": "."
+    },
+    "AUTO_REACT": {
+      "description": "Set true to auto-react to messages.",
+      "value": "false",
+      "required": false
+    },
+    "AUTO_STATUS_REACT": {
+      "description": "Set true to auto-react to Status.",
+      "value": "false",
+      "required": false
+    },
+    "ANTIDELETE": {
+      "description": "Set true to see deleted messages.",
+      "value": "false",
+      "required": false
+    },
+    "WELCOME": {
+      "description": "Put 'false' or 'true' to enable or disable WELCOME.",
+      "value": "true",
+      "required": false
+    },
+    "AUTO_VIEW_STATUS": {
+      "description": "Auto-view saved WhatsApp statuses.",
+      "value": "true",
+      "required": false
+    },
+    "CHATBOT": {
+      "description": "Set to true if you want your bot to autoreply messages.",
+      "value": "false",
+      "required": false
+    },
+    "AUTO_READ_MESSAGES": {
+      "description": "Set to true if you want the bot to read all messages.",
+      "value": "false",
+      "required": false
+    },
+    "OWNER_NUMBER": {
+      "description": "The phone numbers of the users who you want to be admin for the bot (should be in international format without + and multiple numbers must be separated by a comma).",
+      "value": "2349122222622"
+    },
+    "PUBLIC": {
+      "description": "Worktype of your bot. Use public or private. If it is private, then only the bot number can use it. If public, then everyone can use it.",
+      "value": "public"
+    },
+    "AUTHOR": {
+      "description": "Put Sticker Pack Author Name.",
+      "value": "horlapookie",
+      "required": false
+    },
+    "GEMINI_API_KEY": {
+      "description": "Google Gemini AI API key for AI commands.",
+      "value": "",
+      "required": false
+    },
+    "WEATHER_API_KEY": {
+      "description": "OpenWeatherMap API key for weather commands.",
+      "value": "",
+      "required": false
+    },
+    "NEWS_API_KEY": {
+      "description": "NewsAPI key for news commands.",
+      "value": "",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+    }
+  ]
+}

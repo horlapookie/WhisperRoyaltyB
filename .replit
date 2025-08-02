@@ -1,0 +1,37 @@
+modules = ["nodejs-20", "python-3.11", "python3"]
+
+[nix]
+channel = "stable-25_05"
+packages = ["ffmpeg", "freetype", "imagemagick", "lcms2", "libimagequant", "libjpeg", "libtiff", "libuuid", "libwebp", "libxcrypt", "openjpeg", "tcl", "tk", "zlib"]
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Start Bot"
+author = 45579606
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm install @whiskeysockets/baileys @hapi/boom chokidar && node index.js"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "whatsapp_bot"
+
+[[workflows.workflow]]
+name = "whatsapp_bot"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "node index.js"
+
+[agent]
+expertMode = true
